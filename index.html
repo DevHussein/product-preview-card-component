@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              white: "#FFFFFF",
+              lightGray: "#F2F2F2",
+              cream: "#F2EAE2",
+              aurometalSaurus: "#6C7289",
+              deepAquamarine: "#3D8168",
+              deepAquamarineHover: "#1A4032",
+              gunmetal: "#1C232B",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              serif: ["Fraunces", "serif"],
+            },
+            spacing: {
+              1600: "128px",
+              600: "48px",
+              500: "40px",
+              400: "32px",
+              300: "24px",
+              200: "16px",
+              150: "12px",
+              100: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Product preview card component</title>
+  </head>
+  <body
+    class="h-screen flex flex-col items-center justify-center bg-cream font-sans antialiased"
+  >
+    <main
+      class="flex flex-col w-[23.438rem] md:w-[37.5rem] items-center justify-center px-4 py-7 md:px-0 md:py-0"
+    >
+      <section
+        class="bg-white flex flex-col md:flex-row md:rounded-r-[.625rem]"
+      >
+        <picture class="md:w-1/2">
+          <source
+            media="(min-width: 376px)"
+            srcset="./images/image-product-desktop.jpg"
+          />
+          <source
+            media="(max-width: 375px)"
+            srcset="./images/image-product-mobile.jpg"
+          />
+          <img
+            class="rounded-t-[.625rem] md:rounded-r-none md:rounded-l-[.625rem] w-full mb-[1.5rem] md:mb-0"
+            src="./images/image-product-desktop.jpg"
+            alt="product image"
+          />
+        </picture>
+        <section class="px-6 md:px-8 flex flex-col md:w-1/2">
+          <h3
+            class="uppercase text-aurometalSaurus text-xs font-medium tracking-[.3125rem] mb-[.75rem] md:mb-[1.25rem] md:mt-8"
+          >
+            PERFUME
+          </h3>
+          <h1 class="font-serif text-[2rem] font-bold leading-8 mb-4 md:mb-6">
+            Gabrielle Essence Eau De Parfum
+          </h1>
+          <p
+            class="text-sm font-medium leading-[1.4375rem] text-aurometalSaurus mb-6 md:mb-[1.875rem]"
+          >
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <section
+            class="flex gap-x-[1.1875rem] items-center mb-5 md:mb-[1.875rem]"
+          >
+            <h1
+              class="text-[2rem] leading-8 font-bold font-serif text-deepAquamarine"
+            >
+              $149.99
+            </h1>
+            <h4
+              class="text-[.8125rem] font-medium text-aurometalSaurus leading-[.8125rem] line-through"
+            >
+              $169.99
+            </h4>
+          </section>
+          <button
+            class="py-[.9375rem] bg-deepAquamarine hover:bg-deepAquamarineHover rounded-lg text-[.875rem] text-white font-bold mb-6 flex items-center justify-center gap-x-[.75rem]"
+          >
+            <img src="images/icon-cart.svg" alt="icon-cart" />
+            Add to Cart
+          </button>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
